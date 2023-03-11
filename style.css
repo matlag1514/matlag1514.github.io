@@ -322,7 +322,7 @@ footer {
 #slides {
   height: 50%;
   position: relative;
-  right: 50vw;
+  right: 100vw;
   display: flex;
   flex-direction: row;
   z-index: 0;
