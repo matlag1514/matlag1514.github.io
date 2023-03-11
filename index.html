@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>new 1514</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/favicon.ico" />
+    <script src="slider.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+<script>
+  function myFunction() {
+    var btn = document.getElementById("menu-btn");
+    var popup = document.getElementById("myPopup");
+    var icon = document.getElementById("btn-icon");
+    popup.classList.toggle("show");
+    if (icon.innerHTML == "close") {
+      icon.innerHTML = "menu";
+    } else {
+    icon.innerHTML = "close";
+    }
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <body>
+    <header>
+      <a class="img-logo">
+        <img src="img/logo white.svg" alt=""/></a>
+        <span>
+        <div class="menu-btn" id="menu-btn"><span class="material-symbols-outlined" id="btn-icon" style="font-size: 36px;" onclick="myFunction()">menu</span>
+          <span class="menu" id="myPopup">  
+            <a href="index.html" class="menu-link">Главная</a>
+            <a href="" class="menu-link">Фотоархив</a>
+            <a href="" class="menu-link">История</a>
+            <a href="" class="menu-link">Отзывы</a>
+          </span>
+        </div>
+        </span>
+      </div>
+    </header>
+    <section style="height: 100vh; padding: 0;">
+      <div class="slider"></div>
+      <div
+        class="itc-slider"
+        data-autoplay="true"
+        data-interval="7000"
+        data-loop="true"
+        data-slider="itc-slider"
+      >
+        <div class="itc-slider__wrapper">
+          <div class="itc-slider__items">
+            <div class="itc-slider__item welcome-img w1"></div>
+            <div class="itc-slider__item welcome-img w2"></div>
+          </div>
+        </div>
+        <div class="sliders">
+          <button class="itc-slider__btn itc-slider__l_btn">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button class="itc-slider__btn itc-slider__r_btn">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+        <ol class="itc-slider__indicators">
+          <li class="itc-slider__indicator" data-slide-to="0"></li>
+          <li class="itc-slider__indicator" data-slide-to="1"></li>
+        </ol>
+      </div>
+      <p class="big-title">математический<br />лагерь<br />школы №1514</p>
+    </section>
+    <section class="sec2">
+      <h1 class="sec2h">что такое матлаг?</h1>
+      <p class="sec2p">Очень трудно рассказать о матлагере в нескольких словах. Здесь каждый может открыть в себе какие нибудь таланты, или узнать что-то новое о своих друзьях, об учителях... Было бы ошибкой думать, что вся деятельность в лагере ограничивается одной математикой. Здесь есть место и спорту, и творчеству и другим наукам, вот только на отдых времени практически не остаётся. Матлагерь может кому-то нравиться, а кому-то – не очень, важно, что нет людей, равнодушных к нему, в общем, сколько людей, столько и мнений.</p>
+      <div id="slides">
+        <img src="slides/IMG_7816.jpg" alt="" class="slide">
+        <img src="slides/_DSC6710.jpg" alt="" class="slide">
+        <img src="slides/IMG_1509.jpg" alt="" class="slide">
+        <img src="slides/20221227_154027.jpg" alt="" class="slide">
+        <img src="slides/20221227_154537.jpg" alt="" class="slide">
+      </div>
+      </div>  
+    </section>
+    <section class="sec3">
+      <div class="sec3h">чем занимаются в матлаге?</div>
+      <div class="adaptive-grid">
+        <div class="grid-block">
+          <div style="box-sizing: border-box; padding: 36px 40px 0 36px;">
+            <div class="sec3p" style="color: #e65822;">Лекции и семинары</div>
+            <div class="sec3p" style="margin-top: .3em;">Равным образом новая модель организационной деятельности представляет собой интересный эксперимент проверки новых предложений. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании соответствующий условий активизации.</div>
+          </div>
+          <div class="grid-block-body">
+            <img src="slides/_DSC6927.jpg" alt="" class="sec3img">
+          </div>
+        </div>
+        <div class="grid-block" style="width: calc(33.3% - 25px);">
+          <div style="box-sizing: border-box; padding: 36px 40px 0 36px;">
+            <div class="sec3p" style="color: #e65822;">Личные и командые олимпиады</div>
+            <div class="sec3p" style="margin-top: .3em;">С другой стороны реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Таким образом новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.</div>
+          </div>
+          <div class="grid-block-body">
+            <img src="slides/20221225_181116.jpg" alt="" class="sec3img">
+          </div>
+        </div>
+        <div class="grid-block">
+          <div style="box-sizing: border-box; padding: 36px 40px 0 36px;">
+            <div class="sec3p" style="color: #e65822;">Регаты и матбои</div>
+            <div class="sec3p" style="margin-top: .3em;">Не следует, однако забывать, что сложившаяся структура организации позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт рамки и место обучения кадров обеспечивает широкому кругу участие в формировании модели развития. Таким образом рамки и место обучения кадров представляет собой интересный эксперимент проверки дальнейших направлений развития.</div>
+          </div>
+          <div class="grid-block-body">
+            <img src="slides/20221228_172135.jpg" alt="" class="sec3img">
+          </div>
+        </div>
+      </div>
+      <div class="adaptive-grid">
+        <div class="big-block">
+          <img src="slides/performing-arts_1f3ad.png" alt="" style="width: 60px; margin-bottom: 18px; filter: drop-shadow(0 0 50px #d4d4d4)">
+          <div class="small-block-h" style="text-shadow: 0 0 1em rgb(0 0 0);">Представления, концерты и игры</div>
+          <div class="big-block-p">Выступления классов, творческие сценки от команд, новогдние представления</div>
+        </div>
+        <div class="small-block">
+          <div class="small-block-body">
+            <div class="flashlight"></div>
+            <img src="slides/mirror-ball_1faa9.png" alt="" style="width: 60px; margin-bottom: 18px;"><div class="small-block-h">Дискотека</div><div class="small-block-p">Обычно проходит в последний день</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec4">
+      <div class="adaptive-grid" style="justify-content: center;">
+        <a class="trans-block" href="#">
+          <span class="material-symbols-outlined" style="font-size: 60px; color: #e65822;">auto_stories</span>
+          <div class="trans-block-h">Фотоархив<span class="material-symbols-outlined chevron_right">chevron_right</span></div>
+          <div class="trans-block-p">Фотографии из лагерей прошлых годов</div>
+        </a>
+        <a class="trans-block" href="#">
+          <span class="material-symbols-outlined" style="font-size: 60px; color: #e65822;">forum</span>
+          <div class="trans-block-h">Отзывы<span class="material-symbols-outlined chevron_right">chevron_right</span> </div>
+          <div class="trans-block-p">Интервью с учителями и учениками</div>
+        </a>
+      </div>
+    </section>
+    <section class="sec5">
+      <div class="sec5h">
+        <div class="marquee">
+          <ul class="marquee-content">
+            <li>частые</li>
+            <li>вопросы</li>
+          </ul>
+          <ul class="marquee-content">
+            <li>частые</li>
+            <li>вопросы</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sec5body">
+        <div class="qa">
+          <div class="question">Где проходит матлаг?</div>
+          <div style="width: 100%; display: flex; justify-content: end;">
+            <iframe class="iframe-1" src="https://yandex.ru/map-widget/v1/?ll=37.406585%2C55.521827&mode=poi&poi%5Bpoint%5D=37.406480%2C55.521644&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D139389741024&utm_source=share&z=16" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+          </div>
+        <div class="qa">
+          <div class="question">Какие условия? Еда нормальная?</div>
+          <div style="width: 100%; display: flex; justify-content: end;">
+          <div class="answer">Хорошие. 3-х разовое питание с шведским столом.
+              <iframe class="iframe-2" src="https://yandex.ru/maps-reviews-widget/139389741024?comments"></iframe>
+          </div>
+        </div>
+        <div class="qa">
+          <div class="question">Там сложно? </div>
+          <div style="width: 100%; display: flex; justify-content: end;">
+          <div class="answer">Да.</div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </body>
+  <footer>
+    <div class="footer">Проект Егора Федорова и Варвары Гребенщиковой 10-1</div>
+  </footer>
+  <script type="text/javascript"> 
+    let sl = document.querySelector("#slides");
+    let sli = sl.getBoundingClientRect().x;
+    window.addEventListener("scroll", function(e) {
+      let current = window.scrollY;
+      sl.style.left = current / 5 + sli +  "px";
+    });
+  </script>
+  <script>
+document.addEventListener('mousemove', function(e) {
+  const flashlight = document.querySelector('.flashlight');
+  const block = document.querySelector('.small-block');
+  
+  let x = e.clientX;
+  let y = e.clientY;
+  let blockX = block.getBoundingClientRect().left;
+  let blockY = block.getBoundingClientRect().top;
+  
+  if (x > blockX && x < blockX + block.offsetWidth &&
+      y > blockY && y < blockY + block.offsetHeight) {
+    flashlight.style.display = "block";
+    flashlight.style.top = (y - blockY) + 'px';
+    flashlight.style.left = (x - blockX) + 'px';
+  } else {
+    flashlight.style.display = "none";
+  }
+});
+  </script>
+  <script>var elements = $('ul.marquee-content li').length;
+
+    for(var i=0;i < elements; i++){
+     $(".marquee-content").clone().prependTo( ".marquee" );
+    };
+    
+    var liEle = [];
+    var liEle = $(".marquee-content li");</script>
+</html>
