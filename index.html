@@ -15,8 +15,16 @@
   function myFunction() {
     var btn = document.getElementById("menu-btn");
     var popup = document.getElementById("myPopup");
+    var popupcont1 = document.getElementById("myPopupCont1");
+    var popupcont2 = document.getElementById("myPopupCont2");
+    var popupcont3 = document.getElementById("myPopupCont3");
+    var popupcont4 = document.getElementById("myPopupCont4");
     var icon = document.getElementById("btn-icon");
     popup.classList.toggle("show");
+    popupcont1.classList.toggle("show");
+    popupcont2.classList.toggle("show");
+    popupcont3.classList.toggle("show");
+    popupcont4.classList.toggle("show");
     if (icon.innerHTML == "close") {
       icon.innerHTML = "menu";
     } else {
@@ -28,21 +36,22 @@
   <body>
     <header>
       <a class="img-logo">
-        <img src="img/logo white.svg" alt=""/></a>
+        <img src="img/logo white.svg" class="logo-w" alt="">
+        <img src="img/logo black.svg" class="logo-b hidden" alt="">
+      </a>
         <span>
-        <div class="menu-btn" id="menu-btn"><span class="material-symbols-outlined" id="btn-icon" style="font-size: 36px;" onclick="myFunction()">menu</span>
-          <span class="menu" id="myPopup">  
-            <a href="index.html" class="menu-link">Главная</a>
-            <a href="" class="menu-link">Фотоархив</a>
-            <a href="" class="menu-link">История</a>
-            <a href="" class="menu-link">Отзывы</a>
-          </span>
+        <div class="menu-btn menu-btn-white" id="menu-btn"><span class="material-symbols-outlined" id="btn-icon" onclick="myFunction()">menu</span>
         </div>
+        <span class="menu" id="myPopup">  
+          <a href="index.html" class="menu-link" id="myPopupCont1" style="background-color: transparent;">Главная</a>
+          <a href="" class="menu-link" id="myPopupCont2" style="background-color: transparent;">Фотоархив</a>
+          <a href="" class="menu-link" id="myPopupCont3" style="background-color: transparent;">История</a>
+          <a href="" class="menu-link" id="myPopupCont4" style="background-color: transparent;">Отзывы</a>
+        </span>
         </span>
       </div>
     </header>
-    <section style="height: 100vh; padding: 0;">
-      <div class="slider"></div>
+    <section class="sec1">
       <div
         class="itc-slider"
         data-autoplay="true"
@@ -83,7 +92,7 @@
       </div>
       </div>  
     </section>
-    <section class="sec3">
+    <section class="sec3" id="sec3">
       <div class="sec3h">чем занимаются в матлаге?</div>
       <div class="adaptive-grid">
         <div class="grid-block">
@@ -178,7 +187,12 @@
     </section>
   </body>
   <footer>
-    <div class="footer">Проект Егора Федорова и Варвары Гребенщиковой 10-1</div>
+    <div class="footer">☮︎ Проект Егора Федорова и Варвары Гребенщиковой 10-1
+      <span class="material-symbols-outlined" style="transform: rotate(90deg);">
+        arrow_top_left
+        </span>
+    </div>
+
   </footer>
   <script type="text/javascript"> 
     let sl = document.querySelector("#slides");
@@ -209,11 +223,32 @@ document.addEventListener('mousemove', function(e) {
 });
   </script>
   <script>var elements = $('ul.marquee-content li').length;
-
     for(var i=0;i < elements; i++){
      $(".marquee-content").clone().prependTo( ".marquee" );
     };
-    
     var liEle = [];
-    var liEle = $(".marquee-content li");</script>
+    var liEle = $(".marquee-content li");
+</script>
+<script>
+  $(function() {
+  let containerPosition = document.getElementById('sec3').getBoundingClientRect().top;
+  $(window).on("scroll", function() {
+      if($(window).scrollTop() > (containerPosition - 7)) {
+          $(".menu-btn").addClass("menu-btn-black");
+          $(".menu-btn").removeClass("menu-btn-white");
+          $(".logo-b").addClass("visible");
+          $(".logo-b").removeClass("hidden");
+          $(".logo-w").addClass("hidden");
+          $(".logo-w").removeClass("visible");
+      } else {
+          $(".menu-btn").addClass("menu-btn-white");
+          $(".menu-btn").removeClass("menu-btn-black");
+          $(".logo-w").addClass("visible");
+          $(".logo-w").removeClass("hidden");
+          $(".logo-b").addClass("hidden");
+          $(".logo-b").removeClass("visible");
+      }
+  });
+});
+</script>
 </html>

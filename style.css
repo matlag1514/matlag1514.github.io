@@ -9,6 +9,99 @@
   src: url(fonts/Inter.woff);
 }
 
+@media (min-width: 1120px) {
+  /* laptop */
+  .big-title {
+    display: flex;
+  }
+  header {
+    height: 66px;
+  }
+  .menu-btn {
+    height: 66px;
+    width: 66px;
+  }
+  #btn-icon {
+    font-size: 36px;
+  }
+  .menu {
+    width: 160px;
+    border-radius: 10px;
+    padding: 8px 0;
+    top: 66px;
+    right: 15px;
+    margin-left: -80px;
+    text-align: center;
+    background-color: white;
+    color: black;
+  }
+
+  .menu-link {
+    box-sizing: border-box;
+    padding: 10px 0;
+    font-size: 18px;
+    font-family: "Inter Special";
+    color: black;
+    visibility: hidden;
+  }
+  .itc-slider {
+    position: relative;
+  }
+}
+
+@media (max-width: 1120px) {
+  /* mobile */
+  .big-title {
+    display: none;
+  }
+  header {
+    height: 132px;
+  }
+  #btn-icon {
+    font-size: 72px;
+  }
+  .menu-btn {
+    height: 132px;
+    width: 132px;
+  }
+  .menu {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+    padding: 132px 0 0 0;
+    top: 0px;
+    right: 0px;
+    text-align: start;
+    background-color: transparent;
+    color: white;
+    transition-delay: 0ms;
+    transition: 425.5ms cubic-bezier(0.4, 0, 0.6, 1) 80ms;
+  }
+  .menu-link {
+    padding: 10px 70px;
+    font-size: 78px;
+    font-family: "Inter Special";
+    background-color: transparent;
+    transition-delay: 0ms;
+    color: transparent;
+    background-color: transparent;
+    transition: 425.5ms cubic-bezier(0.4, 0, 0.6, 1) 80ms;
+  }
+
+  .show {
+    background-color: black;
+    color: white;
+    transition: 425.5ms cubic-bezier(0.4, 0, 0.6, 1) 80ms;
+  }
+
+  .itc-slider {
+    display: none;
+  }
+  .sec1 {
+    background-color: #e65822;
+  }
+}
+
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
@@ -46,7 +139,6 @@ a {
 
 header {
   width: 100%;
-  height: 66px;
   z-index: 150;
   display: flex;
   flex-direction: row;
@@ -55,55 +147,46 @@ header {
 }
 
 .menu-btn {
-  height: 66px;
-  width: 66px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   text-align: center;
-  color: white;
-  filter: drop-shadow(0 0 1em rgb(0, 0, 0, 0.2));
   user-select: none;
+  z-index: 12;
+  position: relative;
 }
 
-.menu-btn .menu {
-  visibility: hidden;
-  width: 160px;
-  background-color: white;
+.menu-btn-white {
+  color: white;
+}
+
+.menu-btn-black {
   color: black;
-  text-align: center;
-  border-radius: 10px;
-  padding: 8px 0;
+}
+
+.menu {
+  visibility: hidden;
   position: absolute;
-  z-index: 1;
-  top: 66px;
-  right: 15px;
+  z-index: 10;
   margin-left: -80px;
   display: flex;
   flex-direction: column;
 }
 
-.menu-btn .menu::after {
+.menu::after {
   content: "";
   position: absolute;
   margin-left: -5px;
 }
 
-.menu-btn .show {
+.show {
   visibility: visible;
 }
 
 .close-btn {
   visibility: hidden;
-}
-
-.menu-link {
-  box-sizing: border-box;
-  padding: 10px 0;
-  font-size: 18px;
-  font-family: "Inter Special";
 }
 
 .menu-link:hover {
@@ -116,8 +199,17 @@ header {
   display: flex;
   box-sizing: border-box;
   padding: 10px 15px;
-  filter: drop-shadow(0 0 1em rgb(0, 0, 0, 0.2));
   user-select: none;
+}
+
+.hidden {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.visible {
+  visibility: visible;
 }
 
 ul {
@@ -158,7 +250,7 @@ footer {
 .footer {
   height: 164px;
   width: 100%;
-  display: flex;
+  display: block;
   box-sizing: border-box;
   flex-direction: row;
   padding: 100px 39px;
@@ -182,10 +274,6 @@ footer {
   color: rgba(255, 255, 255, 0.8);
   background-color: #f44336;
   font-size: 7rem;
-}
-
-.itc-slider {
-  position: relative;
 }
 
 .itc-slider__wrapper {
@@ -270,7 +358,6 @@ footer {
   font-family: "Gramatika Bold";
   position: relative;
   bottom: calc(100vw * 3 * 0.07 * 0.9);
-  display: flex;
   flex-direction: row;
   z-index: 4;
   line-height: 90%;
@@ -290,6 +377,11 @@ footer {
 
 .w2 {
   background-image: url("welcome/2.jpg");
+}
+
+.sec1 {
+  height: 100vh;
+  padding: 0;
 }
 
 .sec2 {
