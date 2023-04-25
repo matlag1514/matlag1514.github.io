@@ -7,15 +7,16 @@
     <link rel="icon" type="image/png" href="img/favicon.ico" />
     <script src="slider.js" defer></script>
     <script>
-      if (document.readyState !== 'loading') {
-    myInitCode();
-} else {
+      if(document.readyState !== 'loading') {
+    runOnStart();
+}
+else {
     document.addEventListener('DOMContentLoaded', function () {
-        myInitCode();
+        runOnStart()
     });
 }
 
-function myInitCode() {
+function runOnStart() {
         const isMobile = navigator.userAgentData.mobile;
         if (isMobile) {
           $(".logo-w").addClass("hidden");
