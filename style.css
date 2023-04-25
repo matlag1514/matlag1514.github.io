@@ -47,6 +47,9 @@
   .itc-slider {
     position: relative;
   }
+  .days {
+    display: none;
+  }
 }
 
 @media (max-width: 1120px) {
@@ -100,6 +103,19 @@
   .sec1 {
     background-color: #e65822;
   }
+  .days {
+    display: flex;
+    color: black;
+    font-weight: 700;
+    user-select: none;
+    line-height: 90%;
+    font-family: "Gramatika Bold";
+    font-size: 132px;
+  }
+  .mobile-sec1 {
+    box-sizing: border-box;
+    padding-top: calc(132px + 160px);
+  }
 }
 
 .material-symbols-outlined {
@@ -130,6 +146,7 @@ body {
   margin-bottom: 164px;
   overflow: overlay;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -193,6 +210,10 @@ header {
   color: #e65822;
 }
 
+.menu-link:active {
+  color: #e65822;
+}
+
 .img-logo {
   width: auto;
   height: auto;
@@ -226,6 +247,10 @@ li {
 }
 
 .link:hover {
+  color: #757575;
+}
+
+.link:active {
   color: #757575;
 }
 
@@ -498,6 +523,10 @@ footer {
 }
 
 .small-block:hover {
+  cursor: none;
+}
+
+.small-block:active {
   cursor: none;
 }
 

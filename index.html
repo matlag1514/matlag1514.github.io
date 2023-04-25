@@ -6,6 +6,31 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="img/favicon.ico" />
     <script src="slider.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        const isMobile = navigator.userAgentData.mobile;
+        if (isMobile) {
+          $(".logo-w").addClass("hidden");
+          $(".logo-b").removeClass("hidden");  
+          $(".menu-btn").addClass("menu-btn-black");
+          $(".menu-btn").removeClass("menu-btn-white");
+          const second = 1000;
+          const minute = second * 60;
+          const hour = minute * 60;
+          const day = hour * 24;
+          let date_ini = new Date();
+          let date_end = new Date(2023, 11, 25);
+          let diff = date_end.getTime() - date_ini.getTime();
+          number = Math.floor(diff / day);
+          if (number > 10 && [11, 12, 13, 14].includes(number%100)) result = ' ' + number + ' дней ';
+          last_num = number % 10;
+          if (last_num == 1) result = number + ' день ';
+          if ([2,3,4].includes(last_num)) result = number + ' дня ';
+          if ([5,6,7,8,9, 0].includes(last_num)) result = number + ' дней ';
+          document.getElementById('days').innerText = result;
+        }
+      });
+      </script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -13,6 +38,7 @@
   </head>
 <script>
   function myFunction() {
+    const isMobile = navigator.userAgentData.mobile; 
     var btn = document.getElementById("menu-btn");
     var popup = document.getElementById("myPopup");
     var popupcont1 = document.getElementById("myPopupCont1");
@@ -25,19 +51,26 @@
     popupcont2.classList.toggle("show");
     popupcont3.classList.toggle("show");
     popupcont4.classList.toggle("show");
-    if (icon.innerHTML == "close") {
-      icon.innerHTML = "menu";
+    if (isMobile && (icon.innerHTML == "menu") && !(btn.classList.contains('menu-btn-white'))) {
+      icon.innerHTML = "close";
+      $(".menu-btn").addClass("menu-btn-white");
+      $(".menu-btn").removeClass("menu-btn-black");  
     } else {
-    icon.innerHTML = "close";
+      if (icon.innerHTML == "menu") {
+      icon.innerHTML = "close";
     }
+    else {
+      icon.innerHTML = "menu";
+    }  
+  }
   }
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <body>
+  <body onload="">
     <header>
       <a class="img-logo">
-        <img src="img/logo white.svg" class="logo-w" alt="">
-        <img src="img/logo black.svg" class="logo-b hidden" alt="">
+        <img src="img/logo white.svg" class="logo-w" id="logo-w" alt="">
+        <img src="img/logo black.svg" class="logo-b hidden" id="logo-b" alt="">
       </a>
         <span>
         <div class="menu-btn menu-btn-white" id="menu-btn"><span class="material-symbols-outlined" id="btn-icon" onclick="myFunction()">menu</span>
@@ -52,6 +85,10 @@
       </div>
     </header>
     <section class="sec1">
+      <div class="mobile-sec1">
+        <div class="days">До матлага осталось</div>
+        <div class="days" id="days"></div>
+      </div>
       <div
         class="itc-slider"
         data-autoplay="true"
@@ -80,7 +117,7 @@
       </div>
       <p class="big-title">математический<br />лагерь<br />школы №1514</p>
     </section>
-    <section class="sec2">
+    <section class="sec2" id="sec2">
       <h1 class="sec2h">что такое матлаг?</h1>
       <p class="sec2p">Очень трудно рассказать о матлагере в нескольких словах. Здесь каждый может открыть в себе какие нибудь таланты, или узнать что-то новое о своих друзьях, об учителях... Было бы ошибкой думать, что вся деятельность в лагере ограничивается одной математикой. Здесь есть место и спорту, и творчеству и другим наукам, вот только на отдых времени практически не остаётся. Матлагерь может кому-то нравиться, а кому-то – не очень, важно, что нет людей, равнодушных к нему, в общем, сколько людей, столько и мнений.</p>
       <div id="slides">
@@ -232,8 +269,10 @@ document.addEventListener('mousemove', function(e) {
 <script>
   $(function() {
   let containerPosition = document.getElementById('sec3').getBoundingClientRect().top;
+  let containerPosition2 = document.getElementById('sec2').getBoundingClientRect().top;
+  const isMobile = navigator.userAgentData.mobile;
   $(window).on("scroll", function() {
-      if($(window).scrollTop() > (containerPosition - 7)) {
+      if($(window).scrollTop() > (containerPosition - 7) || ($(window).scrollTop() < (containerPosition2 - 7) && isMobile)) {
           $(".menu-btn").addClass("menu-btn-black");
           $(".menu-btn").removeClass("menu-btn-white");
           $(".logo-b").addClass("visible");
