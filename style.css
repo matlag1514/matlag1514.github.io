@@ -53,6 +53,7 @@
   .adaptive-grid {
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 0;
   }
 
   .grid-block {
@@ -69,6 +70,47 @@
   }
   .flashlight {
     opacity: 0.7;
+  }
+  .sec2h {
+    font-size: 56px;
+  }
+  .sec2p {
+    margin: 40px 0 40px 40px;
+    font-size: 24px;
+  }
+  .sec2 {
+    padding: 100px 65px;
+  }
+  .slide {
+    height: 350px;
+    border-radius: 30px;
+    margin-right: 10px;
+  }
+  #mob-slides {
+    display: none;
+  }
+  .sec3h {
+    font-size: 56px;
+    margin-left: 35px;
+  }
+  .sec3p {
+    font-size: 21px;
+    font-family: "Inter Special";
+  }
+  .grid-block {
+    border-radius: 30px;
+  }
+  .grid-block-text {
+    box-sizing: border-box;
+    padding: 30px 35px 0;
+  }
+  .small-block-h {
+    color: white;
+    font-size: 46px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    font-family: "Inter Special";
+    line-height: 90%;
   }
 }
 
@@ -146,7 +188,7 @@
   }
   .big-block {
     width: 100%;
-    height: 500px;
+    height: 750px;
   }
   .small-block {
     width: 100%;
@@ -156,10 +198,59 @@
   .flashlight {
     opacity: 0;
   }
+  .sec2h {
+    font-size: 90px;
+  }
+  .sec2p {
+    margin: 40px 0 60px 0;
+    font-size: 40px;
+    line-height: 1.3;
+  }
+  .slide {
+    height: 500px;
+    border-radius: 40px;
+    margin-right: 20px;
+  }
+  #mob-slides {
+    display: flex;
+    position: relative;
+    right: 200vw;
+    flex-direction: row;
+    z-index: 0;
+    margin-top: 20px;
+  }
+  .sec2 {
+    padding: 150px 65px;
+  }
+  .sec3h {
+    font-size: 90px;
+    margin-left: 60px;
+    margin-bottom: 25px;
+  }
+  .sec3p {
+    font-size: 50px;
+    font-family: "Inter Special";
+  }
+  .grid-block {
+    border-radius: 60px;
+  }
+  .grid-block-text {
+    box-sizing: border-box;
+    padding: 60px 70px 0;
+  }
+  .small-block-h {
+    color: white;
+    font-size: 92px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    font-family: "Inter Special";
+    line-height: 95%;
+  }
 }
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  user-select: none;
 }
 
 ::selection {
@@ -183,7 +274,7 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   position: relative;
-  margin-bottom: 164px;
+  margin-bottom: 220px;
   overflow: overlay;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
@@ -303,7 +394,6 @@ li {
 
 footer {
   background-color: white;
-  color: #9c9ba2;
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -313,12 +403,12 @@ footer {
 }
 
 .footer {
-  height: 164px;
+  height: auto;
   width: 100%;
   display: block;
   box-sizing: border-box;
   flex-direction: row;
-  padding: 100px 39px;
+  padding: 70px 110px;
   position: absolute;
   bottom: 0;
 }
@@ -457,38 +547,27 @@ footer {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 100px 65px;
   background-color: black;
 }
 
 .sec2p {
   color: white;
-  margin: 40px 0 40px 40px;
-  font-size: 24px;
   font-family: "Inter Special";
 }
 
 .sec2h {
   font-weight: 700;
   color: #e65822;
-  font-size: 56px;
   font-family: "Gramatika Bold";
   margin: 0;
 }
 
 #slides {
-  height: 50%;
   position: relative;
-  right: 50vw;
+  right: 100vw;
   display: flex;
   flex-direction: row;
   z-index: 0;
-}
-
-.slide {
-  height: 350px;
-  border-radius: 30px;
-  margin-right: 10px;
 }
 
 .sec3 {
@@ -506,28 +585,20 @@ footer {
 .sec3h {
   font-weight: 700;
   color: black;
-  font-size: 56px;
   font-family: "Gramatika Bold";
-  margin-left: 40px;
+  box-sizing: border-box;
 }
 
 .adaptive-grid {
   display: flex;
   width: 100%;
-  margin-top: 25px;
 }
 
 .grid-block {
   background-color: white;
-  border-radius: 30px;
   height: auto;
   display: flex;
   flex-direction: column;
-}
-
-.sec3p {
-  font-size: 21px;
-  font-family: "Inter Special";
 }
 
 .sec3img {
@@ -544,11 +615,6 @@ footer {
   justify-content: center;
   align-items: center;
   height: 100%;
-}
-
-.grid-block-text {
-  box-sizing: border-box;
-  padding: 36px 40px 0 36px;
 }
 
 .small-block {
@@ -590,14 +656,6 @@ footer {
   font-family: "Inter Special";
   display: flex;
   flex-direction: column;
-}
-
-.small-block-h {
-  color: white;
-  font-size: 46px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  font-family: "Inter Special";
 }
 
 .small-block-p {
@@ -810,4 +868,28 @@ footer {
   border-radius: 8px;
   box-sizing: border-box;
   margin-top: 15px;
+}
+
+.copyright {
+  font-weight: 700;
+  font-size: 40px;
+  font-family: "Gramatika Bold";
+  color: black;
+}
+
+.links {
+  font-size: 19px;
+  letter-spacing: 0.04em;
+  font-family: "Inter Special";
+  color: #010401;
+  opacity: 0.5;
+  margin-left: 5px;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.links:hover {
+  opacity: 0.3;
+  transition: 0.3s;
 }

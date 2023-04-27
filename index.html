@@ -28,7 +28,7 @@ function runOnStart() {
           const hour = minute * 60;
           const day = hour * 24;
           let date_ini = new Date();
-          let date_end = new Date(2023, 11, 25);
+          let date_end = new Date(2023, 11, 26);
           let diff = date_end.getTime() - date_ini.getTime();
           number = Math.floor(diff / day);
           if (number > 10 && [11, 12, 13, 14].includes(number%100)) result = ' ' + number + ' дней ';
@@ -95,7 +95,7 @@ function runOnStart() {
     </header>
     <section class="sec1">
       <div class="mobile-sec1">
-        <div class="days">До матлага осталось</div>
+        <div class="days">до матлага осталось</div>
         <div class="days" id="days"></div>
       </div>
       <div
@@ -133,8 +133,20 @@ function runOnStart() {
         <img src="slides/IMG_7816.JPG" alt="" class="slide">
         <img src="slides/DSC6710.JPG" alt="" class="slide">
         <img src="slides/IMG_1509.JPG" alt="" class="slide">
+        <img src="slides/20221227_154537.jpg" alt="" class="slide">
+        <img src="slides/IMG_7816.JPG" alt="" class="slide">
+        <img src="slides/20221227_154027.jpg" alt="" class="slide">
+        <img src="slides/DSC6710.JPG" alt="" class="slide">
+        <img src="slides/IMG_1509.JPG" alt="" class="slide">
         <img src="slides/20221227_154027.jpg" alt="" class="slide">
         <img src="slides/20221227_154537.jpg" alt="" class="slide">
+      </div>
+      <div id="mob-slides">
+        <img src="slides/IMG_7816.JPG" alt="" class="slide">
+        <img src="slides/20221227_154537.jpg" alt="" class="slide">
+        <img src="slides/IMG_1509.JPG" alt="" class="slide">
+        <img src="slides/20221227_154027.jpg" alt="" class="slide">
+        <img src="slides/IMG_7816.JPG" alt="" class="slide">  
       </div>
       </div>  
     </section>
@@ -233,14 +245,27 @@ function runOnStart() {
     </section>
   </body>
   <footer>
-    <div class="footer">☮︎ Проект Егора Федорова и Варвары Гребенщиковой 10-1
-      <span class="material-symbols-outlined" style="transform: rotate(90deg);">
-        arrow_top_left
-        </span>
+    <div class="footer">
+      <div class="copyright">☮︎ Проект Егора Федорова и Варвары Гребенщиковой 10-1</div>
+      <div style="display: flex; justify-content: end;">
+        <!--
+        <div class="links">
+          <span class="material-symbols-outlined" style=" top: 5px; position: relative;">
+            calendar_month
+            </span>«сколько дней до матлага?»
+        </div>
+        -->
+      <div class="links">наверх
+        <span class="material-symbols-outlined" style="transform: rotate(90deg); top: 5px; position: relative;">
+          arrow_top_left
+          </span>
+      </div>
+    </div>
     </div>
 
   </footer>
   <script type="text/javascript"> 
+    const isMobile = navigator.userAgentData.mobile;
     let sl = document.querySelector("#slides");
     let sli = sl.getBoundingClientRect().x;
     window.addEventListener("scroll", function(e) {
@@ -298,5 +323,15 @@ document.addEventListener('mousemove', function(e) {
       }
   });
 });
+</script>
+<script>
+  const isMobile1 = navigator.userAgentData.mobile;
+  if (isMobile1){
+  let sl1 = document.querySelector("#mob-slides");
+  let sli1 = sl1.getBoundingClientRect().x;
+  window.addEventListener("scroll", function(e) {
+  let current1 = window.scrollY;
+  sl1.style.right = current1 / 7 - sli +  "px";});
+  }
 </script>
 </html>
