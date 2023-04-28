@@ -63,10 +63,13 @@
   .big-block {
     width: calc(66.6% - 12.5px);
     height: auto;
+    border-radius: 30px;
+    padding: 36px 40px;
   }
   .small-block {
     width: calc(33.3% - 12.5px);
     height: auto;
+    border-radius: 30px;
   }
   .flashlight {
     opacity: 0.7;
@@ -111,6 +114,47 @@
     letter-spacing: 0.04em;
     font-family: "Inter Special";
     line-height: 90%;
+  }
+  .small-block-body {
+    padding: 140px 40px 140px;
+  }
+  .big-block-p {
+    font-size: 18px;
+    margin-top: 18px;
+  }
+  .emoji-art {
+    width: 60px;
+    margin-bottom: 18px;
+    filter: drop-shadow(0 0 50px #000);
+  }
+  .double-grid {
+    display: flex;
+    justify-content: center;
+  }
+  .trans-block {
+    width: 33.3%;
+    padding: 58px 0 42px;
+    margin: 0 27px 0 41.5px;
+  }
+  .trans-block-h {
+    font-size: 21px;
+  }
+
+  .trans-block-p {
+    font-size: 19px;
+  }
+
+  #chevron_right {
+    font-weight: normal;
+    position: relative;
+    top: 6px;
+    left: 0;
+    transition: all 0.2s;
+    font-size: 21px;
+  }
+  #trans-icon {
+    font-size: 60px;
+    color: #e65822;
   }
 }
 
@@ -185,15 +229,22 @@
   .grid-block {
     width: 100%;
     margin-bottom: 25px;
+    border-radius: 60px;
   }
   .big-block {
     width: 100%;
     height: 750px;
+    border-radius: 60px;
+    padding: 60px 70px;
   }
   .small-block {
     width: 100%;
     height: auto;
     margin-top: 25px;
+    border-radius: 60px;
+  }
+  .small-block-body {
+    padding: 140px 70px;
   }
   .flashlight {
     opacity: 0;
@@ -231,20 +282,63 @@
     font-size: 50px;
     font-family: "Inter Special";
   }
-  .grid-block {
-    border-radius: 60px;
-  }
   .grid-block-text {
     box-sizing: border-box;
     padding: 60px 70px 0;
   }
   .small-block-h {
     color: white;
-    font-size: 92px;
+    font-size: 70px;
     font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.07em;
+    position: relative;
+    filter: drop-shadow(0 0 50px #000000a1);
     font-family: "Inter Special";
-    line-height: 95%;
+    line-height: 97%;
+  }
+  .big-block-p {
+    font-size: 30px;
+    margin-top: 40px;
+    filter: drop-shadow(0 0 50px #00000042);
+  }
+  .emoji-art {
+    width: 120px;
+    margin-bottom: 36px;
+  }
+  .light {
+    filter: drop-shadow(0 0 50px #0ff);
+  }
+  .double-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .trans-block {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 80px 120px 80px 120px;
+    margin: 0;
+  }
+
+  .trans-block-h {
+    font-size: 42px;
+  }
+
+  .trans-block-p {
+    font-size: 38px;
+  }
+
+  #chevron_right {
+    font-size: 42px;
+    font-weight: normal;
+    position: relative;
+    top: 10px;
+    left: 0;
+    transition: all 0.2s;
+  }
+  #trans-icon {
+    font-size: 100px;
+    color: #e65822;
   }
 }
 
@@ -619,7 +713,6 @@ footer {
 
 .small-block {
   background-color: black;
-  border-radius: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -639,9 +732,7 @@ footer {
 .big-block {
   background-image: url(slides/IMG_7946.JPG);
   background-position: 45% 70%;
-  border-radius: 30px;
   box-sizing: border-box;
-  padding: 36px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -649,7 +740,6 @@ footer {
 
 .small-block-body {
   box-sizing: border-box;
-  padding: 140px 40px 140px;
   font-size: 46px;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -662,8 +752,9 @@ footer {
   color: white;
   font-size: 14px;
   font-weight: 100;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.001em;
   margin-top: 14px;
+  font-family: "Grammatika";
 }
 
 .flashlight {
@@ -672,9 +763,9 @@ footer {
   height: 0.001px;
   border-radius: 50%;
   background-color: #fff;
-  box-shadow: 0 0 30px 15px #fff, 0 0 50px 30px #f0f, 0 0 70px 45px #0ff;
   transition: all 0.01s ease-out;
   will-change: transform;
+  box-shadow: 0 0 30px 15px #fff, 0 0 50px 30px #f0f, 0 0 70px 45px #0ff;
   z-index: -1;
 }
 
@@ -686,9 +777,7 @@ footer {
 
 .big-block-p {
   color: white;
-  font-size: 18px;
   font-family: "Inter Special";
-  margin-top: 0.3em;
   letter-spacing: 0.07em;
   text-shadow: 0 0 1em rgb(0 0 0);
 }
@@ -707,8 +796,6 @@ footer {
 }
 
 .trans-block {
-  margin: 0 27px 0 41.5px;
-  width: 33.3%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -716,11 +803,9 @@ footer {
   position: relative;
   z-index: 1;
   user-select: none;
-  padding: 58px 0 42px;
 }
 
 .trans-block-h {
-  font-size: 21px;
   font-weight: 600;
   margin-top: 0.53em;
   letter-spacing: 0.04em;
@@ -728,20 +813,10 @@ footer {
 }
 
 .trans-block-p {
-  font-size: 19px;
   margin-top: 0.4em;
   letter-spacing: 0.04em;
   font-family: "Inter Special";
   color: #86868b;
-}
-
-.chevron_right {
-  font-size: 21px;
-  font-weight: normal;
-  position: relative;
-  top: 6px;
-  left: 0;
-  transition: all 0.2s;
 }
 
 .trans-block:hover .chevron_right {
