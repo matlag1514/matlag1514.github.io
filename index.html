@@ -2,9 +2,20 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>new 1514</title>
+    <title>Матлагерь Школы №1514 - Главная</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+    <meta
+    name="description"
+    content="Математический лагерь Школы №1514 проходит ежегодно в пред в Санатории Десна. В нем ученики математических классов участвуют в матбоях и олимпиадах, слушают лекции и готовят предновогодние выступления."
+  />
+  <meta name="viewport" content="maximum-scale=1.0, user-scalable=no" />
     <script src="slider.js" defer></script>
     <script>
       if(document.readyState !== 'loading') {
@@ -97,6 +108,8 @@ function runOnStart() {
       <div class="mobile-sec1">
         <div class="days">до матлага осталось</div>
         <div class="days" id="days"></div>
+        <div class="welcome1"></div>
+        <div class="welcome2"></div>
       </div>
       <div
         class="itc-slider"
@@ -225,24 +238,31 @@ function runOnStart() {
       </div>
       <div class="sec5body">
         <div class="qa">
-          <div class="question">Где проходит матлаг?</div>
-          <div style="width: 100%; display: flex; justify-content: end;">
-            <iframe class="iframe-1" src="https://yandex.ru/map-widget/v1/?ll=37.406585%2C55.521827&mode=poi&poi%5Bpoint%5D=37.406480%2C55.521644&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D139389741024&utm_source=share&z=16" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+          <div class="question-container">
+            <div class="question">Где проходит матлаг?</div>
           </div>
+          <div class="answer-container">
+            <div class="answer desktop-hide">В Санатории Десна.</div>
+            <iframe class="iframe-1" src="https://yandex.ru/map-widget/v1/?ll=37.406585%2C55.521827&mode=poi&poi%5Bpoint%5D=37.406480%2C55.521644&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D139389741024&utm_source=share&z=16" width="100%" height="100%" frameborder="1" allowfullscreen="true"></iframe>
+        </div>
+      </div>
         <div class="qa">
-          <div class="question">Какие условия? Еда нормальная?</div>
-          <div style="width: 100%; display: flex; justify-content: end;">
-          <div class="answer">Хорошие. 3-х разовое питание с шведским столом.
+          <div class="question-container">
+            <div class="question">Какие условия? Еда нормальная?</div>
+          </div>
+          <div class="answer-container">
+            <div class="answer">Хорошие. 3-х разовое питание с шведским столом.
               <iframe class="iframe-2" src="https://yandex.ru/maps-reviews-widget/139389741024?comments"></iframe>
+            </div>
           </div>
         </div>
         <div class="qa">
-          <div class="question">Там сложно? </div>
-          <div style="width: 100%; display: flex; justify-content: end;">
+          <div class="question-container">
+            <div class="question">Там сложно?</div>
+          </div>
+          <div class="answer-container">
           <div class="answer">Да.</div>
         </div>
-      </div>
-      </div>
     </section>
   </body>
   <footer>
@@ -263,7 +283,6 @@ function runOnStart() {
       </div>
     </div>
     </div>
-
   </footer>
   <script type="text/javascript"> 
     const isMobile = navigator.userAgentData.mobile;
@@ -306,7 +325,7 @@ document.addEventListener('mousemove', function(e) {
   let containerPosition = document.getElementById('sec3').getBoundingClientRect().top;
   let containerPosition2 = document.getElementById('sec2').getBoundingClientRect().top;
   const isMobile = navigator.userAgentData.mobile;
-  $(window).on("scroll", function() {
+  $(window).on("scroll", {passive: true}, function() {
       if($(window).scrollTop() > (containerPosition - 7) || ($(window).scrollTop() < (containerPosition2 - 7) && isMobile)) {
           $(".menu-btn").addClass("menu-btn-black");
           $(".menu-btn").removeClass("menu-btn-white");
