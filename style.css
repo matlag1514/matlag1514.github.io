@@ -216,8 +216,6 @@
   }
   .mobile-sec1 {
     display: none;
-    box-sizing: border-box;
-    padding-top: calc(132px + 120px);
   }
 }
 
@@ -287,7 +285,7 @@
     height: 100%;
     overflow: hidden;
     box-sizing: border-box;
-    padding-top: calc(132px + 120px);
+    justify-content: center;
   }
   .adaptive-grid {
     flex-direction: column;
