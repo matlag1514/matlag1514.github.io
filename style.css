@@ -203,6 +203,11 @@
   }
   .links {
     font-size: 19px;
+    margin: 15px 0 0 15px;
+  }
+  .links-icon {
+    top: 5px;
+    font-size: 24px !important;
   }
   body {
     margin: 0;
@@ -464,10 +469,15 @@
   }
   .links {
     font-size: 38px;
+    margin: 30px 0 0 30px;
+  }
+  .links-icon {
+    top: 15px;
+    font-size: 42px !important;
   }
   body {
     margin: 0;
-    margin-bottom: 400px;
+    margin-bottom: 420px;
   }
   .footer {
     padding: 100px 60px;
@@ -505,6 +515,11 @@ body {
   overflow: overlay;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -1066,15 +1081,18 @@ footer {
 }
 
 .links {
+  display: block;
   letter-spacing: 0.04em;
   font-family: "Inter Special";
   color: #010401;
   opacity: 0.5;
-  margin-left: 5px;
   user-select: none;
   cursor: pointer;
-  margin-top: 15px;
   transition: 0.3s;
+}
+
+.links-icon {
+  position: relative;
 }
 
 .links:hover {
