@@ -209,12 +209,12 @@
     top: 5px;
     font-size: 24px !important;
   }
-  body {
+  .index-body {
     margin: 0;
     margin-bottom: 240px;
   }
   .footer {
-    padding: 70px 110px;
+    padding: 200px 110px 70px 110px;
   }
   .sec5 {
     border-radius: 0 0 50px 50px;
@@ -475,7 +475,7 @@
     top: 15px;
     font-size: 42px !important;
   }
-  body {
+  .index-body {
     margin: 0;
     margin-bottom: 420px;
   }
@@ -964,7 +964,7 @@ footer {
   color: #86868b;
 }
 
-.trans-block:hover .chevron_right {
+.trans-block:hover #chevron_right {
   left: 4px;
   transition: all 0.2s;
 }
@@ -1128,4 +1128,88 @@ footer {
   flex-direction: column;
   justify-content: center;
   background-repeat: no-repeat;
+}
+
+.archive-header {
+  padding: 100px 65px;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #e65822;
+  font-size: 56px;
+  font-weight: 700;
+  font-family: "Gramatika Bold";
+  border-radius: 0 0 50px 50px;
+}
+
+.archive-sec {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  min-height: 100vh;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 92px 184px;
+  background-color: white;
+  border-radius: 0 0 50px 50px;
+}
+
+.archive-tile {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+.year {
+  font-size: 42px;
+  font-family: "Inter Special";
+  font-weight: 700;
+  box-sizing: border-box;
+  padding: 25px 0 25px 25px;
+  min-width: 135px;
+}
+
+.tile-content {
+  border-radius: 30px;
+  background-color: #f7f7f9;
+  height: 100.5px;
+  width: 100%;
+  font-size: 28px;
+  font-family: "Inter Special";
+  box-sizing: border-box;
+  padding: 25px;
+  line-height: 50.5px;
+  user-select: none;
+  cursor: pointer;
+  margin-left: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#chevron_right_a {
+  font-weight: normal;
+  position: relative;
+  left: 0;
+  transition: all 0.2s;
+  font-size: 28px;
+  line-height: 50.5px;
+}
+
+.tile-content:hover #chevron_right_a {
+  left: 4px;
+  transition: all 0.2s;
+}
+
+.archive-body {
+  margin: 0;
+  margin-bottom: 240px;
 }
