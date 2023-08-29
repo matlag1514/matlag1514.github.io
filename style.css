@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @font-face {
   font-family: "Gramatika Bold";
   src: url(fonts/Gramatika\ Bold.woff);
@@ -240,6 +238,22 @@
     min-width: 135px;
   }
   .tile-content {
+    border-radius: 30px;
+    height: 100.5px;
+    font-size: 28px;
+    padding: 25px;
+    line-height: 50.5px;
+    margin-left: 25px;
+  }
+  .matlogo {
+    margin-top: 10px;
+    height: 80.5px;
+  }
+  .mobile-margin {
+    margin-top: 0;
+  }
+  .two-tile {
+    width: 100%;
     border-radius: 30px;
     height: 100.5px;
     font-size: 28px;
@@ -537,10 +551,27 @@
   .tile-content {
     border-radius: 30px;
     height: 137.5px;
-    font-size: 42px;
+    font-size: 50px;
     padding: 25px;
     line-height: 87.5px;
     margin-left: 20px;
+  }
+  .matlogo {
+    margin-top: 18.5px;
+    height: 100.5px;
+  }
+  .mobile-margin {
+    margin-top: 25px;
+  }
+  .two-tile {
+    width: calc(100% - 25px);
+    border-radius: 30px;
+    height: 137.5px;
+    font-size: 50px;
+    padding: 25px;
+    line-height: 87.5px;
+    margin-left: 20px;
+    width: auto;
   }
   #chevron_right_a {
     font-size: 42px;
@@ -946,6 +977,8 @@ footer {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
   justify-content: center;
 }
 
@@ -1240,6 +1273,16 @@ footer {
   justify-content: space-between;
 }
 
+.two-tile {
+  background-color: #f7f7f9ed;
+  font-family: "Inter Special";
+  box-sizing: border-box;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
 #chevron_right_a {
   font-weight: normal;
   position: relative;
@@ -1253,6 +1296,16 @@ footer {
 }
 
 .tile-content:hover {
+  background-color: #f2f2f2;
+  transition: all 0.2s;
+}
+
+.two-tile:hover #chevron_right_a {
+  left: 4px;
+  transition: all 0.2s;
+}
+
+.two-tile:hover {
   background-color: #f2f2f2;
   transition: all 0.2s;
 }
