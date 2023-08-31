@@ -24,37 +24,30 @@
     var popup = document.getElementById("myPopup");
     var popupcont1 = document.getElementById("myPopupCont1");
     var popupcont2 = document.getElementById("myPopupCont2");
-    var popupcont3 = document.getElementById("myPopupCont3");
+    /* var popupcont3 = document.getElementById("myPopupCont3"); */
     var popupcont4 = document.getElementById("myPopupCont4");
     var icon = document.getElementById("btn-icon");
     popup.classList.toggle("show");
     popupcont1.classList.toggle("show");
     popupcont2.classList.toggle("show");
-    popupcont3.classList.toggle("show");
+    /* popupcont3.classList.toggle("show"); */
     popupcont4.classList.toggle("show");
-    if (isMobile && (icon.innerHTML == "menu") && !(btn.classList.contains('menu-btn-white'))) {
+    if (icon.innerHTML == "menu") {
       icon.innerHTML = "close";
+      if (isMobile) {
       $(".menu-btn").addClass("menu-btn-white");
-      $(".menu-btn").removeClass("menu-btn-black");  
+      $(".menu-btn").removeClass("menu-btn-black");
+      }
     } else {
-      if (icon.innerHTML == "menu") {
-      icon.innerHTML = "close";
-    }
-    else {
       icon.innerHTML = "menu";
-    }  
-  }
+      if (isMobile) {
+      $(".menu-btn").addClass("menu-btn-black");
+      $(".menu-btn").removeClass("menu-btn-white");
+      }
+    }
   }
 </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5SSVS66CYR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5SSVS66CYR');
-</script>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -77,12 +70,11 @@
         <img src="img/logo black.svg" class="logo-b" id="logo-b" alt="">
       </a>
         <span>
-        <div class="menu-btn menu-btn-black" id="menu-btn"><span class="material-symbols-outlined" id="btn-icon" onclick="myFunction()">menu</span>
-        </div>
+          <div class="menu-btn menu-btn-black" id="menu-btn"><span class="material-symbols-outlined" id="btn-icon" onclick="myFunction()">menu</span></div>
         <span class="menu" id="myPopup">  
           <a href="index.html" class="menu-link" id="myPopupCont1" style="background-color: transparent;">Главная</a>
           <a href="archive.html" class="menu-link" id="myPopupCont2" style="background-color: transparent;">Фотоархив</a>
-          <a href="" class="menu-link" id="myPopupCont3" style="background-color: transparent;">История</a>
+          <!--  <a href="" class="menu-link" id="myPopupCont3" style="background-color: transparent;">История</a> -->
           <a href="reviews.html" class="menu-link" id="myPopupCont4" style="background-color: transparent;">Отзывы</a>
         </span>
         </span>
@@ -192,8 +184,10 @@
         <div class="archive-tile">
           <img src="matlogos/2000.jpg" alt="" class="matlogo">
             <div class="year">2000</div>
+            <div class="adaptive-grid">
             <a class="two-tile" href="https://goo.gl/photos/7BgEfALWXkKAf4M1A" target="_blank">Фотографии<span class="material-symbols-outlined" id="chevron_right_a">chevron_right</span></a>
             <a class="two-tile mobile-margin" href="http://www.1514.ru/events/matlager-2001/index.html" target="_blank">Сайт<span class="material-symbols-outlined" id="chevron_right_a">chevron_right</span></a>
+          </div>
         </div>
     </section>
   </body>

@@ -24,37 +24,30 @@
     var popup = document.getElementById("myPopup");
     var popupcont1 = document.getElementById("myPopupCont1");
     var popupcont2 = document.getElementById("myPopupCont2");
-    var popupcont3 = document.getElementById("myPopupCont3");
+    /* var popupcont3 = document.getElementById("myPopupCont3"); */
     var popupcont4 = document.getElementById("myPopupCont4");
     var icon = document.getElementById("btn-icon");
     popup.classList.toggle("show");
     popupcont1.classList.toggle("show");
     popupcont2.classList.toggle("show");
-    popupcont3.classList.toggle("show");
+    /* popupcont3.classList.toggle("show"); */
     popupcont4.classList.toggle("show");
-    if (isMobile && (icon.innerHTML == "menu") && !(btn.classList.contains('menu-btn-white'))) {
+    if (icon.innerHTML == "menu") {
       icon.innerHTML = "close";
+      if (isMobile) {
       $(".menu-btn").addClass("menu-btn-white");
-      $(".menu-btn").removeClass("menu-btn-black");  
+      $(".menu-btn").removeClass("menu-btn-black");
+      }
     } else {
-      if (icon.innerHTML == "menu") {
-      icon.innerHTML = "close";
-    }
-    else {
       icon.innerHTML = "menu";
-    }  
-  }
+      if (isMobile) {
+      $(".menu-btn").addClass("menu-btn-black");
+      $(".menu-btn").removeClass("menu-btn-white");
+      }
+    }
   }
 </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5SSVS66CYR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5SSVS66CYR');
-</script>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -82,12 +75,103 @@
         <span class="menu" id="myPopup">  
           <a href="index.html" class="menu-link" id="myPopupCont1" style="background-color: transparent;">Главная</a>
           <a href="archive.html" class="menu-link" id="myPopupCont2" style="background-color: transparent;">Фотоархив</a>
-          <a href="" class="menu-link" id="myPopupCont3" style="background-color: transparent;">История</a>
-          <a href="" class="menu-link" id="myPopupCont4" style="background-color: transparent;">Отзывы</a>
+          <!-- <a href="" class="menu-link" id="myPopupCont3" style="background-color: transparent;">История</a>-->
+          <a href="reviews.html" class="menu-link" id="myPopupCont4" style="background-color: transparent;">Отзывы</a>
         </span>
         </span>
       </div>
     </header>
+    <section class="archive-header">Отзывы</section>
+    <section class="archive-sec">
+      <div class="reviews-intro">
+        <span style="color: #e65822;">Матлагерь – это… </span> <br> 
+        Сложно подумать, что математика – точная, формальная наука, не имеющая своих границ в повседневной жизни, исследуемая тысячами ученых может быть… веселой и не скучной? <br>
+        С данным утверждением достаточно тяжело согласиться, учитывая, что, изучая математику в школе, было пролито немало слез и прожито не меньше бессонных ночей. Но тем не менее, математика в нашей школе обрела "новую жизнь" в форме Матлагеря, который теперь ежегодно проводится зимой для математических классов. <br> <br>
+        <span style="color: #e65822;">Что же такое Матлаг?</span> <br>
+        Чтобы верно сформулировать ответ на этот вопрос, мы обратились за помощью к ребятам и учителям нашей школы, попросив их ответить на несколько вопросов.
+      </div>
+      <div class="adaptive-grid">
+        <a class="respondent-link" href="#kmn"><img src="slides/1413869586.jpg" alt="" class="avatar"><p class="respondent-desc">Марина Николаевна Королева <span style="color: #86868b;">– учительница географии и физики в школе, организаторка и одна из основательниц матлагеря.</span></p><span class="material-symbols-outlined" id="chevron_right_rev">chevron_right</span></a>
+        <a class="respondent-link" href="#masha"><img src="slides/photo_2023-08-17_00-07-58.jpg" alt="" class="avatar"><p class="respondent-desc">Маша Лопатина <span style="color: #86868b;">– выпускница школы, побывавшая в матлагере дважды.</span></p><span class="material-symbols-outlined" id="chevron_right_rev">chevron_right</span></a>
+        <a class="respondent-link" href="#vsb"><img src="slides/mirror-ball_1faa9.png" alt="" class="avatar"><p class="respondent-desc">Василий Сергеевич Белохин <span style="color: #86868b;">– выпускник школы, побывавший в первом матлагере и посетивший его снова в 2022 году.</span></p><span class="material-symbols-outlined" id="chevron_right_rev">chevron_right</span></a>
+      </div>
+      <div class="respondent" id="kmn"><img src="slides/1413869586.jpg" alt="" class="s-avatar"><p style="margin: auto 0 auto 18px;">Марина Николаевна Королева</p></div>
+      <div class="reviews">
+        <div class="review">
+          <div class="question-container">
+            <div class="question-r">Когда вы в первый раз побывали в матлаге? Как это было?</div>
+          </div>
+          <div class="answer-container" >
+            <div class="answer-r" style="background-color: #f7f7f9ed;">В декабре 2001 года я первый раз поехала в матлагерь, на тот момент мои ребята учились в 8 классе и, честно говоря, мне не понравилось. А все, что мне в школе не нравится, я начинаю переделывать так, как мне нравится. Изначально, я не знала как и на что повлиять, на следующий год, я уже понимала, что конкретно мне не нравится, но стеснялась сказать, а после я уже все придумала и с 2004 года начала заниматься организацией самого матлага. <br> <br>
+              Я помню, из неприятного, тогда проводился один матбой в день, на котором должны были присутствовать все остальные классы. Вечерние меропрития тоже были довольно скучные, мы развлекались как могли: КВН для желающих и экскурсии в монастырь под Звенигородом. Из не менее приятного помню, что один раз в нашем пансионате, комнату девочек затопило водой и ночью их переселяли. <br> <br>
+              Тем не менее, воспоминания о матлаге тех лет у меня хорошие. Мой первый класс первый раз побывал в матлаге, который на тот момент был таким, каким он был. Именно тогда мы поняли, что его можно начать как-то переделывать. Спустя время, учителя стали придумывать мюзиклы, репетировать по ночам и в дневное время показывать ученикам.</div>
+        </div>
+        </div>
+        <div class="review">
+          <div class="question-container">
+            <div class="question-r">Как вы считаете, матлаг стал лучше с годами?</div>
+          </div>
+          <div class="answer-container" >
+            <div class="answer-r" style="background-color: #f7f7f9ed;">На данный момент в матлаг приезжает очень большое количество людей, поскольку к нам добавились еще и ребята с Новаторов, поэтому с организацией иногда не все получается так гладко, как хотелось бы. Но глобально, матлагерь с годами усовершенствовался.</div>
+        </div>
+        </div>
+        <div class="review">
+          <div class="question-container">
+            <div class="question-r">В основном, едущих в матлагерь ребят пугает неумение решать сложные задачки и отсутствие опыта в матбоях, регатах и другого рода математических соревнований, давайте опровергнем этот страшный слух.</div>
+          </div>
+          <div class="answer-container" >
+            <div class="answer-r" style="background-color: #f7f7f9ed;">Со временем стало понятно, что не все ребята занимаются олимпиадной математикой. Поэтому в матлагере стали придумывать возможности и задания по математике разного уровня, чтобы все могли что-то порешать, поскольку совершенно очевидно, что, если дать всем ребятам одинаковые задачки, то кто-то один будет ими заниматься, а остальные будут сидеть и плевать в потолок.</div>
+        </div>
+        </div>
+        <div class="review">
+          <div class="question-container">
+            <div class="question-r">Охарактеризуйте матлаг тремя словами.</div>
+          </div>
+          <div class="answer-container" >
+            <div class="answer-r" style="background-color: #f7f7f9ed;">Глаголы : ждем, любим, нравится <br>
+              Прилагательные: предновогодний, дружелюбный, общительный <br>
+              Частицы: ух, эх, ах <br>
+              </div>
+        </div>
+        </div>
+      </div>
+      <div class="respondent" id="masha"><img src="slides/photo_2023-08-17_00-07-58.jpg" alt="" class="s-avatar"><p style="margin: auto 0 auto 18px;">Маша Лопатина </p></div>
+      <div class="reviews">
+      <div class="review">
+          <div class="question-container">
+            <div class="question-r">Каковы были твои первые впечатления о матлагере?</div>
+          </div>
+          <div class="answer-container" >
+            <div class="answer-r" style="background-color: #f7f7f9ed;">Первый раз я приехала в матлагерь в 2019 году в 8 классе. Помню, что хотелось везде успеть и смотреть на все широко раскрытыми глазами, чтобы всё-всё увидеть и ничего не упустить. А было действительно очень много всего: репетиции выступлений с командой учеников разного возраста или с классом, лекции, на которых непременно хотелось решить все данные задачи (что получалось, к сожалению, не всегда), множество олимпиад, на которых тоже хотелось себя проявить, выступления. Тогда я почувствовала в матлаге атмосферу конкурса и праздника. И матлагерь на все время карантина (с 2020 по 2022 год) запомнился именно таким: ярким, красочным и очень насыщенным не только лагерной атмосферой, но и математикой.</div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="question-container">
+          <div class="question-r">Совпали ли твои ожидания с реальной картинкой?</div>
+        </div>
+        <div class="answer-container" >
+          <div class="answer-r" style="background-color: #f7f7f9ed;">Не помню, чтобы я строила ожидания насчёт матлагеря в 8 классе, но в 11 хотелось, чтобы матлагерь получился как тогда и даже лучше, ведь мы были последними, кто в него ездил. Хотелось, чтобы также люди радовались победам в олимпиадах и шуткам на выступлениях. <br>
+            В 2022 году первым впечатлением о матлагере было: как же нас много! Оказалось, что нас, математиков, на два здания 12 классов, и показалось, что "как тогда" будет сделать довольно сложно. Но в этом году оправдалось ожидание, что наше "общество в оранжевых футболках" едино. Всегда чувствовалась поддержка из зала, на дискотеке все радостно танцевали и пели одни и те же песни. Кажется, что и олимпиадная математика вышла довольно интересной: по крайней мере 11 класс точно насладился атмосферой командных олимпиад. Ожидание, что матлагерь – это классно, и что математики всё-таки одно целое, оправдалось. Надеюсь, это удалось почувствовать всем.</div>
+        </div>
+      </div>
+      <div class="review">
+      <div class="question-container">
+        <div class="question-r">Есть ли у тебя какие-то яркие воспоминания, связанные с этим местом?</div>
+      </div>
+      <div class="answer-container" >
+        <div class="answer-r" style="background-color: #f7f7f9ed;">1) Лекция Сергея Александровича Горбушина про плоскую землю. Это, наверное, одно из самых ярких впечатлений в матлагере в 8 классе. Не буду спойлерить ничего будущим математикам, но меня тогда это заставило задуматься о роли науки в целом. Что мы принимаем за истинное, что за ложное, и как нам это помогает в жизни. <br>
+          2) Остальные наиболее яркие воспоминания связаны с выступлениями. <br>
+          В 2019 году мне больше всего запомнились сценки от команд. Мы переделывали различные сказки под нашу реальность. Помню, как в одной из команд досталась "Сказка о глупом мышонке", и они придумали, что различные певцы приходят к мышонку, чтобы спеть ему колыбельную. Был даже Скриптонит, который не смог усыпить малыша, потому что пел слишком непонятно :). <br>
+          У нас была сказка "Путаница". Мы реализовали её как ситуацию, в которой учителя решили поменяться предметами. Соответственно мы пародировали учителей, и это было очень весело и никто не обиделся. <br>
+          У самих учителей была сказка "Мойдодыр", и Марину Николаевну в этой роли забыть невозможно. <br>
+          В 2022 году больше всего запомнились выступления классов и учителей в разных стилях искусства: балет мальчиков-зайчиков от 11-7, сказка от учителей, арт-хаус от 10-2, фольклорный хор от 8-1, мюзикл от 9-1. У нас был иммерсивный спектакль, который было очень весело готовить: мы реализовали на сцене новый год в обычной семье. <br>
+          Выступления - это всегда очень весело и надолго запоминается. Матлагерь - это не только про математику.</div> 
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="respondent" id="vsb"><img src="slides/mirror-ball_1faa9.png" alt="" class="s-avatar"><p style="margin: auto 0 auto 18px;">Я не буду его вставлять, он скучный. Нужно у кого-нибудь другого брать интервью.</p></div>
+    </section>
   </body>
   <footer>
     <div class="footer" style="background-color: black;">
