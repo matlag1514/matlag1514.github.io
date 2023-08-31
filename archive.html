@@ -19,7 +19,7 @@
   </head>
 <script>
   function myFunction() {
-    const isMobile = navigator.userAgentData.mobile; 
+    const isMobile = window.innerWidth <= 1120; 
     var btn = document.getElementById("menu-btn");
     var popup = document.getElementById("myPopup");
     var popupcont1 = document.getElementById("myPopupCont1");
