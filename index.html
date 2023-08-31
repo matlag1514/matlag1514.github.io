@@ -27,7 +27,7 @@
     });
     }
     function runOnStart() {
-        const isMobile = navigator.userAgentData.mobile;
+        const isMobile = window.innerWidth <= 1120;
         if (isMobile) {
           $(".logo-w").addClass("hidden");
           $(".logo-b").removeClass("hidden");  
