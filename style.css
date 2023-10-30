@@ -178,7 +178,7 @@
     border-radius: 30px;
     font-size: 21px;
     padding: 18px 20px;
-    width: 435px;
+    width: 480px;
   }
   .review {
     width: 1200px;
@@ -200,7 +200,7 @@
     padding: 18px 20px;
     border-radius: 30px;
     font-size: 21px;
-    width: 435px;
+    width: 550px;
     top: -25px;
   }
   .desktop-hide {
@@ -299,7 +299,7 @@
   }
   .respondent-desc {
     margin: auto 12px auto 18px;
-    font-size: 14px;
+    font-size: 18px;
   }
   #chevron_right_rev {
     font-size: 28px;
@@ -311,8 +311,8 @@
     padding-top: 46px;
   }
   .reviews {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 8%;
+    padding-right: 8%;
   }
   .reviews-intro {
     font-size: 24px;
@@ -568,7 +568,7 @@
   .answer-r {
     padding: 30px 40px;
     border-radius: 55.25px;
-    font-size: 18px;
+    font-size: 21px;
     width: 100%;
     top: 0;
     letter-spacing: 0.04em;
@@ -1481,7 +1481,8 @@ footer {
 }
 
 #chevron_right_rev {
-  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   position: relative;
   left: 0;
   transition: all 0.2s;

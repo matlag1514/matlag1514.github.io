@@ -38,7 +38,7 @@
           const hour = minute * 60;
           const day = hour * 24;
           let date_ini = new Date();
-          let date_end = new Date(2023, 11, 26);
+          let date_end = new Date(2023, 11, 24);
           let diff = date_end.getTime() - date_ini.getTime();
           number = Math.floor(diff / day);
           if (number > 10 && [11, 12, 13, 14].includes(number%100)) result = ' ' + number + ' дней ';
@@ -285,7 +285,7 @@
     <div class="footer">
       <div class="copyright">☮︎ Проект Егора Федорова и Варвары Гребенщиковой 11-1</div>
       <div style="display: flex; justify-content: end;">  
-        <a class="links" href="https://t.me/fed_egor">обратная связь
+        <a class="links" href="https://tally.so/r/mDpOol" target="_blank">обратная связь
           <span class="material-symbols-outlined links-icon">
             chat
             </span>
