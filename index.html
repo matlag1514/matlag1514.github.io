@@ -38,7 +38,7 @@
           const hour = minute * 60;
           const day = hour * 24;
           let date_ini = new Date();
-          let date_end = new Date(2023, 11, 24);
+          let date_end = new Date(2024, 11, 24);
           let diff = date_end.getTime() - date_ini.getTime();
           number = Math.floor(diff / day);
           if (number > 10 && [11, 12, 13, 14].includes(number%100)) result = ' ' + number + ' дней ';
@@ -359,7 +359,7 @@ document.addEventListener('mousemove', function(e) {
 });
 </script>
 <script>
-  const isMobile1 = navigator.userAgentData.mobile;
+  const isMobile1 = window.innerWidth <= 1120;
   if (isMobile1){
   let sl1 = document.querySelector("#mob-slides");
   let sli1 = sl1.getBoundingClientRect().x;
